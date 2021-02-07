@@ -2,30 +2,54 @@
 <html>
 	<head>
 		<title>Mahkameh's Page</title>
+  		<meta name="Greeting" content="Welcome to My Page">
+  		<meta name="Introduction" content="Who am I">
+
+  		<style>
+         	#canvas{border:5px solid blue;}
+   	 	</style>
+   	 	<canvas id = "canvas" width = "1500" height = "10"></canvas>
 	</head>
 		
 	
 	<body>
+
+		<header>
 		<!-- Header-->
+	<aside>
+		<section>
 		<h1>Welcome To My Page</h1>
+		</section>
+	</aside>
+		<pre>"Live as if you were to die tomorrow. Learn as if you were to live forever." Mahatma Gandhi</pre>
 		<!-- Paragraphs -->
 		<p>
-			Hello My name is Mahkameh Torabi. I am a Computer Science major at <strong>UC San Diego</strong>. You can click on this <a href="http://ucsd.edu" target="_blank">link</a> to check out at my school.
+			Hello My name is Mahkameh Torabi. I am a <i>Computer Science</i> major at <strong>UC San Diego</strong>. You can click on this <a href="http://ucsd.edu" target="_blank">link</a> to check out at my school.
 		</p>
-		
-		<img src = "pic/M.jpeg" alt="Profile's image" width="150">
-
+		</header>
+		<picture>
+			 <source media="(min-width:15px)" srcset="pic/M.jpeg">
+  			 <img src="pic/M.jpeg" alt="My picture" style="width:150px;">
+		</picture>
 		<p>
-			 I am currently working at the <a href="http://sigurdsonlab.ucsd.edu" target="_blank"> Sigurdson Lab</a> located in the <em>Biomedical Leichtag Research Building</em>. We do research on misfolding protiens that lead to neurodegenerative diseases.
+			 I am currently working at the <a href="http://sigurdsonlab.ucsd.edu" target="_blank"> <b>Sigurdson Lab</b></a> located in the <em>Biomedical Leichtag Research Building</em>. We do research on <code>misfolding protiens </code> that lead to neurodegenerative diseases.
 			 I am the lab manager. I manage the environmental health and safety of the lab, train new employees, and manage the lab supplies. Here's a picture of my workplace building:
 			 <br>
 			  <br>
+
 			 <iframe src="pic/LBR.jpg" width="500" height="270">
 			 	
 			 </iframe>
 
+			 <br>
+	
 		<!-- Unordered List -->
+
+		<header>
+		<section>
 			<h2>When I have free time, my hobbies include: </h2>
+		</section>
+		</header>
 	<nav>
 		<ul>
 			<li>Watching TV</li>
@@ -35,8 +59,9 @@
 		</ul>
 	</nav>
 		<!-- Ordered List -->
-
+		<aside>
 			<h3>My favorite programming languages:</h3>
+		</aside>
 		<ol>
 			
 			<li>Python</li>
@@ -45,10 +70,24 @@
 			
 		</ol>
 
+	<audio controls>
+  		<source src="audio1/1.mp3" type="audio/mpeg">
+	</audio>
+	<br>
+
+	<video width="320" height="240" controls>
+  		<source src="video/waves.mp4" type="video/mp4">
+	</video>
+	<main>
+		<footer>
 		<p>
 			Here are a couple websites to help you start learning to code: <a href="https://www.hackerrank.com" target="_blank">Hackerrank</a> and <a href="https://www.codecademy.com" target="_blank">Codecademy</a>
 
 		</p>
+		</footer>
+	</main>
+
+
 		
 		<hr>
 
@@ -98,9 +137,12 @@
  	</form>
 
  		<br>
-
+ 		<details>
+  <summary>Choose your favorite instrument? (Select all that apply to you, then click submit)</summary>
+	<label for="colors">Choose your favorite instrument? (Select all that apply to you, then click submit)</label>
+	</details>
  		<form>
- 		Choose your favorite instrument? (Select all that apply to you, then click submit)
+ 		
  		<div>
 			<input type="checkbox" id="instrumentOne" name="instrumentOne" value="Cello">
 			<label for="instrumentOne">Cello</label>
@@ -136,50 +178,133 @@
 		<br>
 
 		<!-- Forms -->
+	<main>
+		<footer>
 		<p>
 			Feel free to leave a feedback for me. You can also contact me at <a href="https://www.linkedin.com/in/mahka-torabi-625939203/" target="_blank">Linkedin</a>
 		</p>
+		</footer>
+	</main>
+
+		<fieldset>
+  			<legend>Please Fill out the Form below:</legend>
+  			<label for="name">Full Name:</label>
+  			<input type="text" placeholder="Enter Your Full Name">
   			<br>
-  		
-		<form>
-
-			<div>
-				<label>Full Name :</label><input type="text" placeholder="Enter Your Full Name">
-			</div>
-			<br>
-
-			<div>
-				<label>Email Address :</label><input type="email" placeholder="Enter Your Email Address">
-			</div>
-			<br>
-			
-			<div>
-				<label>Phone Number :</label><input type="tel" placeholder="Enter Your Phone Number ">
-			</div>
-			<br>
-
-			<div>
-				<label>Graduation Date :</label><input type="month">
-			</div>
-			<br>
-
-			<div>
-				<label> Today's Date: </label><input type="date">
-			</div>
-			<br>
-
-			<div>
-				<label> Feedback</label>
+  			<label>Email Address :</label>
+  			<input type="email" placeholder="Enter Your Email Address">
+  			<br>
+  			<label>Phone Number :</label>
+  			<input type="tel" placeholder="Enter Your Phone Number ">
+  			<br>
+  			<label>Graduation Date :</label>
+  			<input type="month">
+  			<br>
+  			<label> Today's Date: </label>
+  			<input type="date">
+  			<br>
+  			<label> Feedback</label>
+  			<div>
 			<textarea name="pic/Feedback"></textarea>
 			<button>Submit</button>
 			<input type="reset">
 
 			</div>	
+ 		</fieldset>
 
 			<br>
-		</form>
 
+	<form action="/action_page.php">
+  		<label for="flowers">Choose your Favorite Flower:</label>
+  	<select name="flowers" id="flowers">
+    	<optgroup label="Empty">
+      	<option value="peony">Peony</option>
+      	<option value="Lavender">Lavender</option>
+      	<option value="Hollyhock">Hollyhock</option>
+    	</optgroup>
+  		</select>
+  		<br><br>
+  		<template>
+  			<input type="button" value="submit">
+  		</template>
+	</form>
+	<br>
 
+<details>
+  <summary>Choose Your Favorite Color:</summary>
+	<label for="colors">Choose Your Favorite Color:</label>
+	</details>
+	<input list="colors" id="color" name="color" />
+
+	<datalist id="colors">
+		<option value="blue">
+   		 <option value="black">
+    	<option value="white">
+    	<option value="pink">
+	</datalist>
+	<br>
+	<input type="button" value="Submit">
+
+	<br>
+	<br>
+
+		<canvas id = "canvas" width = "1500" height = "10"></canvas>
+
+	<svg width="50" height="50">
+  		<circle cx="30" cy="30" r="10" stroke="red" stroke-width="2" fill="blue" />
+	</svg>
+
+	<svg width="50" height="50">
+  		<circle cx="30" cy="30" r="10" stroke="red" stroke-width="2" fill="blue" />
+	</svg>
+
+	<svg width="50" height="50">
+  		<circle cx="30" cy="30" r="10" stroke="red" stroke-width="2" fill="blue" />
+	</svg>
+
+	<svg width="50" height="50">
+  		<circle cx="30" cy="30" r="10" stroke="red" stroke-width="2" fill="blue" />
+	</svg>
+
+	<svg width="50" height="50">
+  		<circle cx="30" cy="30" r="10" stroke="red" stroke-width="2" fill="blue" />
+	</svg>
+
+	<svg width="50" height="50">
+  		<circle cx="30" cy="30" r="10" stroke="red" stroke-width="2" fill="blue" />
+	</svg>
+
+	<svg width="50" height="50">
+  		<circle cx="30" cy="30" r="10" stroke="red" stroke-width="2" fill="blue" />
+	</svg>
+
+	<svg width="50" height="50">
+  		<circle cx="30" cy="30" r="10" stroke="red" stroke-width="2" fill="blue" />
+	</svg>
+
+	<svg width="50" height="50">
+  		<circle cx="30" cy="30" r="10" stroke="red" stroke-width="2" fill="blue" />
+	</svg>
+
+	<svg width="50" height="50">
+  		<circle cx="30" cy="30" r="10" stroke="red" stroke-width="2" fill="blue" />
+	</svg>
+
+	<svg width="50" height="50">
+  		<circle cx="30" cy="30" r="10" stroke="red" stroke-width="2" fill="blue" />
+	</svg> 
+
+<br>
+
+<figure>
+  <img src="pic/NY.jpg" alt="Statue" style="width:50%">
+  <figcaption> Liberty IslandManhattan, New York City, New York</figcaption>
+</figure>
+
+<figure>
+  <img src="pic/MRM.jpg" alt="Statue" style="width:50%">
+  <figcaption> Pennington County, South Dakota</figcaption>
+</figure>
 	</body>
 
 </html>
